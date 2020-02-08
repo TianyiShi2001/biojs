@@ -1,6 +1,36 @@
 export const AminoAcidData = {
   all: "ACDEFGHIKLMNOPQRSTUVWY",
+  attr: {
+    basic: "HKR",
+    acidic: "CDEY",
+    sulfur: "CM",
+    aromatic: "PWY"
+  },
+  name: {
+    A: ["ala", "alanine"],
+    C: ["cys", "cysteine"],
+    D: ["asp", "aspartate"],
+    E: ["glu", "glutamate"],
+    F: ["phe", "phenylalanine"],
+    G: ["gly", "glycine"],
+    H: ["his", "histidine"],
+    I: ["ile", "isoleucine"],
+    K: ["lys", "lysine"],
+    L: ["leu", "leucine"],
+    M: ["met", "methionine"],
+    O: ["orn", "ornithine"],
+    P: ["pro", "proline"],
+    Q: ["gln", "glutamine"],
+    R: ["arg", "arginine"],
+    S: ["ser", "serine"],
+    T: ["thr", "threonine"],
+    U: ["sec", "selenocysteine"],
+    V: ["val", "valine"],
+    W: ["phe", "phenylalanine"],
+    Y: ["tyr", "tyrosine"]
+  },
   mw: {
+    // water excluded
     A: [71.0779, 71.037113],
     C: [103.1429, 103.009184],
     D: [115.0874, 115.026943],
@@ -50,7 +80,7 @@ export const AminoAcidData = {
     Y: [181.1885, 181.07389],
     water: [18.0153, 18.010565]
   },
-  pi: {
+  charge: {
     pos_pKs: { Nterm: 7.5, K: 10.0, R: 12.0, H: 5.98 },
     neg_pKs: { Cterm: 3.55, D: 4.05, E: 4.45, C: 9.0, Y: 10.0 },
     pKcterminal: { D: 4.55, E: 4.75 },

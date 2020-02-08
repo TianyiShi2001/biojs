@@ -16,7 +16,7 @@ export class AminoAcidComposition {
       this[a]["count"]++;
     }
     for (const a in this) {
-      this[a]["content"] = +(this[a]["count"] / seq.length).toFixed(5);
+      this[a]["content"] = this[a]["count"] / seq.length;
     }
   }
 }

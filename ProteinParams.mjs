@@ -10,12 +10,12 @@ export function compute_molecular_weight(aminoAcidComposition) {
   }
   mw += mw_table["water"][0];
   mw_mi += mw_table["water"][1];
-  return [+mw.toFixed(3), +mw_mi.toFixed(5)];
+  return [mw, mw_mi];
 }
 
 export function compute_isoelectric_point(aminoAcidComposition) {
   let {
-    pi: { pos_pKs, neg_pKs, pKcterminal, pKnterminal, charged_aas }
+    charge: { pos_pKs, neg_pKs, pKcterminal, pKnterminal, charged_aas }
   } = AminoAcidData;
 
   const charged_aas_count = (function select_charged() {
@@ -53,10 +53,10 @@ export function compute_isoelectric_point(aminoAcidComposition) {
       return pH;
     }
   }
-  return +pi().toFixed(3);
+  return pi();
 }
 
 //   (function _update_pKs_tables() {
-//     pKnterminal[nterm] && (pos_pKs["Nterm"] = pKnterminal[nterm]);
-//     pKcterminal[cterm] && (neg_pKs["Cterm"] = pKcterminal[cterm]);
+//     nterm in pKnterminal && (pos_pKs["Nterm"] = pKnterminal[nterm]);
+//     cterm in pKcterminal && (neg_pKs["Cterm"] = pKcterminal[cterm]);
 //   })();
