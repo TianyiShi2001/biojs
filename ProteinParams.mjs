@@ -25,22 +25,21 @@ export function compute_isoelectric_point(aminoAcidComposition) {
     }
     charged["Nterm"] = 1.0;
     charged["Cterm"] = 1.0;
-    console.log(charged); // NOTE - REMOVE
     return charged;
   })();
 
   function charge_at_pH(pH) {
-    let positive_charge;
+    let positive_charge = 0;
     for (const a in pos_pKs) {
       const pK = pos_pKs[a];
       const partial_charge = 1.0 / (1.0 + 10 ** (pH - pK));
-      positive_charge = charged_aas_count[a] * partial_charge;
+      positive_charge += charged_aas_count[a] * partial_charge;
     }
-    let negative_charge;
+    let negative_charge = 0;
     for (const a in neg_pKs) {
       const pK = neg_pKs[a];
       const partial_charge = 1.0 / (1.0 + 10 ** (pK - pH));
-      negative_charge = charged_aas_count[a] * partial_charge;
+      negative_charge += charged_aas_count[a] * partial_charge;
     }
     return positive_charge - negative_charge;
   }
