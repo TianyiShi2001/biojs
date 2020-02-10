@@ -1,4 +1,4 @@
-import { AminoAcidData } from "./AminoAcidData.mjs";
+import { AMINO_ACID_DATA } from "./AMINO_ACID_DATA.mjs";
 
 export class AminoAcidComposition {
   constructor(seq) {
@@ -6,7 +6,7 @@ export class AminoAcidComposition {
     this.count_aa(seq);
   }
   init() {
-    for (const a of AminoAcidData.all) {
+    for (const a of AMINO_ACID_DATA.ALL) {
       this[a] = {};
       this[a].count = 0;
     }

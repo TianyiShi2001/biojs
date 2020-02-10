@@ -1,12 +1,12 @@
-export const AminoAcidData = {
-  all: "ACDEFGHIKLMNOPQRSTUVWY",
-  attr: {
+export const AMINO_ACID_DATA = {
+  ALL: "ACDEFGHIKLMNOPQRSTUVWY",
+  ATTR: {
     basic: "HKR",
     acidic: "CDEY",
     sulfur: "CM",
     aromatic: "PWY"
   },
-  name: {
+  NAME: {
     A: ["ala", "alanine"],
     C: ["cys", "cysteine"],
     D: ["asp", "aspartate"],
@@ -29,7 +29,7 @@ export const AminoAcidData = {
     W: ["phe", "phenylalanine"],
     Y: ["tyr", "tyrosine"]
   },
-  mw: {
+  MOLECULAR_WEIGHT: {
     // water excluded
     A: [71.0779, 71.037113],
     C: [103.1429, 103.009184],
@@ -55,7 +55,7 @@ export const AminoAcidData = {
     Y: [163.1732, 163.063325],
     water: [18.0153, 18.010565]
   },
-  mw1: {
+  MOLECULAR_WEIGHT_1: {
     A: [89.0932, 89.047678],
     C: [121.1582, 121.019749],
     D: [133.1027, 133.037508],
@@ -80,11 +80,36 @@ export const AminoAcidData = {
     Y: [181.1885, 181.07389],
     water: [18.0153, 18.010565]
   },
-  charge: {
-    pos_pKs: { Nterm: 7.5, K: 10.0, R: 12.0, H: 5.98 },
-    neg_pKs: { Cterm: 3.55, D: 4.05, E: 4.45, C: 9.0, Y: 10.0 },
-    pKcterminal: { D: 4.55, E: 4.75 },
-    pKnterminal: { A: 7.59, M: 7.0, S: 6.93, P: 8.36, T: 6.82, V: 7.44, E: 7.7 },
-    charged_aas: ["K", "R", "H", "D", "E", "C", "Y"]
-  }
+  CHARGE: {
+    POSITIVE_PKAS: { Nterm: 7.5, K: 10.0, R: 12.0, H: 5.98 },
+    NEGATIVE_PKAS: { Cterm: 3.55, D: 4.05, E: 4.45, C: 9.0, Y: 10.0 },
+    PKA_C_TERMINAL: { D: 4.55, E: 4.75 },
+    PKA_N_TERMINAL: { A: 7.59, M: 7.0, S: 6.93, P: 8.36, T: 6.82, V: 7.44, E: 7.7 },
+    CHARGED_AMINO_ACIDS: ["K", "R", "H", "D", "E", "C", "Y"]
+  },
+  ATOMIC_COMPOSITION: {
+    A: {C:3, H:7, N:1, O:2},
+    C: {C:3, H:7, N:1, O:2, S:1},
+    D: {C:4, H:7, N:1, O:4},
+    E: {C:5, H:9, N:1, O:4},
+    F: {C:9, H:11, N:1, O:2},
+    G: {C:2, H:5, N:1, O:2},
+    H: {C:6, H:9, N:3, O:2},
+    I: {C:6, H:13, N:1, O:2},
+    K: {C:6, H:14, N:2, O:2},
+    L: {C:6, H:13, N:1, O:2},
+    M: {C:5, H:11, N:1, O:2, S:1},
+    N: {C:4, H:8, N:2, O:3},
+    O: {C:5, H:12, N:2, O:2},
+    P: {C:5, H:9, N:1, O:2},
+    Q: {C:5, H:10, N:2, O:3},
+    R: {C:6, H:14, N:4, O:2},
+    S: {C:3, H:7, N:1, O:3},
+    T: {C:4, H:9, N:1, O:3},
+    U: {C:3, H:7, N:1, O:2, Se:1},
+    V: {C:5, H:11, N:1, O:2},
+    W: {C:11, H:12, N:2, O:2},
+    Y: {C:9, H:11, N:1, O:3}
+  },
+  EXTINCTION_COEFFICIENT: {C:125, W: 5690, Y:1280}
 };
