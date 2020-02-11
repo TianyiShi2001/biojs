@@ -1,10 +1,10 @@
 import { AminoAcidComposition } from "./AminoAcidComposition.mjs";
 import { compute_molecular_weight, compute_atomic_composition, compute_isoelectric_point, compute_extinction_coefficient } from "./ProteinParams.mjs";
+import { Seq } from "./Seq.mjs";
 
-export class Protein {
+export class Protein extends Seq{
   constructor(seq) {
-    this.seq = seq.toUpperCase();
-    this.length = this.seq.length;
+    super(seq);
     this.aminoAcidComposition = new AminoAcidComposition(seq);
     this.positiveCount = this.aminoAcidComposition.R.count + this.aminoAcidComposition.K.count;
     this.negativeCount = this.aminoAcidComposition.D.count + this.aminoAcidComposition.E.count;
