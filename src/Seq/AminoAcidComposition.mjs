@@ -1,4 +1,4 @@
-import { AMINO_ACID_DATA } from "./AMINO_ACID_DATA.mjs";
+import { AMINO_ACID_DATA } from "../Data/AMINO_ACID_DATA.mjs";
 
 export class AminoAcidComposition {
   constructor(seq) {

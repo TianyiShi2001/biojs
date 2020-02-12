@@ -1,0 +1,29 @@
+{
+  "name": "biojs",
+  "version": "0.0.1",
+  "description": "## Motivation",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianyiShi2001/biojs.git"
+  },
+  "author": "Tianyi Shi <ShiTianyi2001@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TianyiShi2001/biojs/issues"
+  },
+  "homepage": "https://github.com/TianyiShi2001/biojs#readme",
+  "dependencies": {
+    "mocha": "^7.0.1"
+  },
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "yargs": "^15.1.0"
+  }
+}
