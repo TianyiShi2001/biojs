@@ -21,8 +21,8 @@ function standardiseFastaString(fastaString) {
 }
 
 function* parseFastaSimple(fastaStringStandardised) {
-  const allLines = fastaStringStandardised.split('')
-  let title = allLines[0].trimRight();
+  const allLines = fastaStringStandardised.split('\n')
+  let title = allLines[0];
   let seqArr = [];
   for (const line of allLines.slice(1)) {
     if (line[0] === ">") {
@@ -38,7 +38,7 @@ function* parseFastaSimple(fastaStringStandardised) {
 }
 
 function* parseFastaSimpleTwoLine(fastaStringStandardised) {
-  const allLines = fastaStringStandardised.split('')
+  const allLines = fastaStringStandardised.split('\n')
   for (const i = 0; i < allLines.length; i++) {
     const line = allLines[i];
     if (!line.trim()) break; // possible trailing empty lines
