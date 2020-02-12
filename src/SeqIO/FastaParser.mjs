@@ -41,6 +41,20 @@ function* parseFastaSimple(allLines) {
   return;
 }
 
+function* parseFastaTwoLines(allLines){
+    for(const i=0, i < allLines.length, i++){
+        const line = allLines[i]
+        if (i % 2 == 0) { // title line
+            if (line !== '>') {
+                throw new ParseError("Expected FASTA record starting with '>' character. Perhaps this file is using FASTA line wrapping?")
+            }
+            title = line.slice(1).trimRight()
+        } else { // sequence line
+            line[0] === '>' && throw new ParseError('hello')
+        }
+    }
+}
+
 export class Fasta {
   // ! needs to allow for custom title parsers.
   constructor(source) {

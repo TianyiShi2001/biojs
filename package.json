@@ -2,12 +2,12 @@
   "name": "biojs",
   "version": "0.0.1",
   "description": "## Motivation",
-  "main": "index.js",
+  "main": "cli.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "mocha"
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,7 @@
     "url": "https://github.com/TianyiShi2001/biojs/issues"
   },
   "homepage": "https://github.com/TianyiShi2001/biojs#readme",
-  "dependencies": {
-    "mocha": "^7.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "prompt": "^1.0.0",
     "yargs": "^15.1.0"
