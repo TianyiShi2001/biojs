@@ -1,13 +1,14 @@
 >Standard format
 GGCAGATTC
 ATA
->Corrupted, with trailing spaces and newlines        
-TGAGCCTTG      
+>Corrupted, with trailing spaces and newlines 
+TGAGCCTTG     
+AGGGGGAACC
 TC    
 
 
 
->Ridiculously corrupted, with spaces within the seq! 
+>Ridiculously corrupted, with spaces within the seq!   
 GGC  AGA  TTC    
 ATA     
 

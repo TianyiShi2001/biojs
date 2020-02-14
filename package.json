@@ -19,7 +19,10 @@
     "url": "https://github.com/TianyiShi2001/biojs/issues"
   },
   "homepage": "https://github.com/TianyiShi2001/biojs#readme",
-  "dependencies": {},
+  "dependencies": {
+    "n-readlines": "^1.0.0",
+    "readline-sync": "^1.4.10"
+  },
   "devDependencies": {
     "prompt": "^1.0.0",
     "yargs": "^15.1.0"
