@@ -17,3 +17,5 @@ const fasta = new FastaParser({
 let sequence = fs.readFileSync(fn || "examples/parse/fasta/ce.fasta", "utf8");
 
 isProtein && console.log(new Protein(fasta.parse(sequence)[0].sequence));
+
+//node cli.mjs -f "examples/parse/fasta/ce.fasta" --protein

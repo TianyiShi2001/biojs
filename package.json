@@ -2,7 +2,7 @@
   "name": "biojs",
   "version": "0.0.1",
   "description": "## Motivation",
-  "main": "cli.js",
+  "main": "cli.mjs",
   "directories": {
     "lib": "lib"
   },
@@ -20,10 +20,16 @@
   },
   "homepage": "https://github.com/TianyiShi2001/biojs#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.8.3",
     "n-readlines": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "prompt": "^1.0.0",
     "yargs": "^15.1.0"
   }
